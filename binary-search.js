@@ -1,7 +1,7 @@
 'use strict';
 
 // Разделяй и властвуй!
-// O(log)
+// O(log N)
  
 const binarySearch = (arr, search) => {
   let start = 0;

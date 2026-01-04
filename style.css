@@ -1,0 +1,36 @@
+.flex {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 10px;
+}
+
+.flex > span {
+  border: 1px solid red;
+}
+
+.high {
+  height: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  height: 100px;
+}
+
+.grid > span {
+  border: 1px solid red;
+}
+
+.accented {
+  align-self: center;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.header {
+  color: #1b94a3;
+}

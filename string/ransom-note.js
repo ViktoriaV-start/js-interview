@@ -6,30 +6,7 @@
  * @param {string} magazine
  * @return {boolean}
  */
-// const canConstruct = function(ransomNote, magazine) {
-//   if(ransomNote.length > magazine.length){
-//         return false
-//     }
-    
-//   let ransom = ransomNote.split('');
-//   let mag = magazine.split('');
 
-//   const length = ransom.length;
-
-
-//   for (let i = 0; i < length; i++) {
-//     const idx = mag.indexOf(ransom[i]);
-    
-//     if (idx < 0) {
-//       return false;
-//     }
-
-//     mag.splice(idx, 1);
-
-//   }
-
-//     return true;
-// };
 
 
 // O(N)

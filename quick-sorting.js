@@ -1,3 +1,4 @@
+'use strict';
 
 const quickSort = (arr) => {
   const length = arr.length;

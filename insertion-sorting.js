@@ -1,3 +1,5 @@
+'use strict';
+
 // CОРТИРОВКА ВСТАВКАМИ
 
 const insertionSort = (arr) => {

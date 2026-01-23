@@ -1,3 +1,5 @@
+'use strict';
+
 // Перевернуть строку на месте
 
 const reverseString = (s) => {

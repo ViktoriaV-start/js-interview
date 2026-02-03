@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Функция конструктор</title>
+</head>
+<body>
+
+  <script>
+    'use strict';
+
+    const message = {
+      date: '02/02/2026'
+    }
+
+// Функции - конструкторы 
+// Функции также являются и объектами, поэтому этой функции-конструктору мы можем установить прототип.
+// Их задача - порождать новые объекты
+function Post (author, text) {
+  this.author = author;
+  this.text = text;
+
+  // Не нужно метод вот так задавать
+  // Это занимает память при каждом создании нового объекта!
+  // Функцию лучше сохранять в прототип, чтобы память не выделялась каждый раз при создании нового экземпляра.
+
+  this.show = function() { console.log(this.author) }
+}
+
+Post.prototype = message; // Установим прототип
+
+
+const post1 = new Post('Lin', 'My love'); // первый объект типа Post
+const post2 = new Post('Neo', 'Guard'); // второй объект типа Post
+
+console.log(post1, post2);
+post1.show();
+
+// Посмотрим, что за объект сейчас находится в прототипе post1 и post2:
+// Это тот же самый объект
+
+console.log(post1.__proto__ === post2.__proto__);  //true
+console.log(message.isPrototypeOf(post1)); // true
+
+  </script>
+  
+</body>
+</html>

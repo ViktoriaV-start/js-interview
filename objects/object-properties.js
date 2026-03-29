@@ -26,7 +26,8 @@ Object.defineProperty(obj, "notEnurmerableProp", {
   configurable: true
 });
 
-console.log(123, obj); // Символ покажут, хотя он неперечисляемый - особый статус. А вот неперечисляемое свойство notEnurmerableProp не покажут
+console.log(123, obj); // Символ покажут, хотя он неперечисляемый - особый статус.
+// А вот неперечисляемое свойство notEnurmerableProp не покажут
 
 // ПОЛУЧИТЬ КЛЮЧИ ОБЪЕКТА - Cобственные перечисляемые
 console.log(clr.b('Cобственные перечисляемые - Object.keys: '), Object.keys(obj));
@@ -61,5 +62,5 @@ console.log(Reflect.has(obj2, 'toString'));
 const objSimple ={};
 console.log(555, (Object.getPrototypeOf(objSimple)).constructor === Object)
 for (let key in objSimple) {
-    console.log(key)
+    console.log(key) // ничего
 }
